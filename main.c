@@ -2,12 +2,11 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define NELEMS(x)  (sizeof(x) / sizeof((x)[0]))
 
 int main()
 {
     GCD();
-    //SieveOfEratosthenes();
+    SieveOfEratosthenes();
     return 0;
 }
 
@@ -47,7 +46,7 @@ void SieveOfEratosthenes()
             printf("%d\n",k); // this just prints out each value if it's Prime
         }
     }
-    printf("There are %d prime numbers up to %d", count, n);
+    printf("There are %d prime numbers up to %d\n", count, n);
 }
 void GCD()
 {
@@ -55,7 +54,7 @@ void GCD()
     printf("Enter number to get Greatest Common Divider:\n");
     scanf(" %d , %d", &x, &y);
     int result = EuclidAlgorithm(x,y);
-    printf("%d", result);
+    printf("%d\n", result);
 }
 int EuclidAlgorithm(int a, int b)
 {
