@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 
 int main()
 {
+    char *c;
+    c = malloc(256);
+    scanf("%255s", c);
+    printf("%s", c);
     GCD();
     SieveOfEratosthenes();
     return 0;
