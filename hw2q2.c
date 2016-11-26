@@ -65,21 +65,10 @@ int Median (int grades[]) //Function that finds the median.
     {
         return 0;
     }
-    if(gradeNum % 2 == 0)
+    while(i < (gradeNum + 1) / 2)
     {
-        while(i < gradeNum / 2)
-        {
-            ++median;
-            i += grades[median];
-        }
-    }
-    else
-    {
-        while(i <= gradeNum / 2)
-        {
-            ++median;
-            i += grades[median];
-        }
+        ++median;
+        i += grades[median];
     }
     return median;
 }
