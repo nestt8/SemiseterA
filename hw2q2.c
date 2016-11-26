@@ -18,7 +18,7 @@
 /*-------------------------------------------------------------------------
   The main program. (describe what your program does here)
  -------------------------------------------------------------------------*/
-int GradeNum (int grades [])
+int GradeNum (int grades []) //Function that finds the actual number of grades entered.
 {
     int count = 0;
     for(int i = 0; i < GradeRange+1; i++)
@@ -31,7 +31,7 @@ int GradeNum (int grades [])
     return count;
 }
 
-int Max (int grades [])
+int Max (int grades []) //Function that finds the highest grade, if there are no grades returns 0.
 {
     int max = 0;
     for (int i = 0; i < GradeRange+1; i++)
@@ -44,7 +44,7 @@ int Max (int grades [])
     return max;
 }
 
-int Min (int grades [])
+int Min (int grades []) //Function that finds the lowest grade, if there are no grades returns 100.
 {
     int min = 100;
     for(int i = GradeRange; i > -1; i--)
@@ -57,7 +57,7 @@ int Min (int grades [])
     return min;
 }
 
-int Median (int grades[])
+int Median (int grades[]) //Function that finds the median.
 {
     int median = -1, i =0;
     while(i <= GradeNum(grades) / 2)
@@ -68,51 +68,55 @@ int Median (int grades[])
     return median;
 }
 
-int BiggerGrades (int grade, int grades [])
+int BiggerGrades (int grade, int grades []) //Function that finds the number of grades higher than a given grade.
 {
     int count = 0;
-    for(int i = grade + 1; i < GradeRange+1; i++)
+    for(int i = 0; i < GradeRange+1; i++)
     {
-        count += grades[i];
-    }
-    return count;
-}
-
-int SmallerGrades (int grade, int grades [])
-{
-    int count = 0;
-    for(int i = grade - 1; i > -1; i--)
-    {
-        count += grades[i];
-    }
-    return count;
-}
-
-/*int Factor(int pass_grade, int percentage, int grades[])//WIP
-{
-    int i = 0, count = 0, relativeMedianIndex, relativeMedian, position = 0;
-    for(;i < GradeRange; i++)
-    {
-        count += grades[i];
-    }
-   if(count % 2 == 0)
-   {
-        relativeMedianIndex = ((((double)percentage / GradeRange) * (count)) + ((((double)percentage / GradeRange) * (count)) +1))/2;
-   }
-   else
-   {
-        relativeMedianIndex = ((double)percentage / GradeRange) * (count+1);
-   }
-    for(int j = 0; j < GradeRange && position < relativeMedianIndex; j++)
-    {
-        if(grades[j] > 0)
+        if(i > grade)
         {
-            position += grades[j];
+            count += grades[i];
         }
     }
-    if(grades[j] < )
+    return count;
 }
-*/
+
+int SmallerGrades (int grade, int grades []) //Function that finds the number of grades lower than a given grade.
+{
+    int count = 0;
+    for(int i = 100; i > -1; i--)
+    {
+        if(i < grade)
+        {
+            count += grades[i];
+        }
+    }
+    return count;
+}
+
+int Factor(int passgrade, int percentage, int grades []) //Function that gets a passing grade and percentage and returns what factor is needed so the given percentage of students
+{
+    int relativeMedian = 101, i = 0, gradeNum = GradeNum(grades);
+    if (passgrade > 100 || passgrade < 0 || percentage > 100 || percentage < 0 )
+    {
+        return 0;
+    }
+    while(i < (gradeNum * ((double)percentage / 100)))
+    {
+        --relativeMedian;
+        i += grades[relativeMedian];
+    }
+    if (relativeMedian >= passgrade)
+    {
+        return 0;
+    }
+    else
+    {
+        return (passgrade - relativeMedian);
+    }
+
+}
+
 int Average(int grades [])
 {
     int sum = 0, count = 0, avg, temp, i;
@@ -133,7 +137,7 @@ int main()
     int Grades[GradeRange+1] = {0};
     int x;
     scanf(" %d", &x);
-    while(x != -1)
+    while(x != -1) //Loop to receive the grades and add them to the array.
     {
         if(x <= GradeRange && x >= MinGrade)
         {
@@ -141,10 +145,9 @@ int main()
         }
         scanf(" %d", &x);
     }
-    //printf("%d", Factor(3,50, Grades));
     char c;
-    int Grade;
-    while(true)
+    int Grade, passGrade, Percentage;
+    while(true) //Infinite loop to receive commands from user and run the corresponding functions.
     {
         scanf(" %c", &c);
         switch(c)
@@ -162,17 +165,23 @@ int main()
                 printf("%d\n", Median(Grades));
                 break;
             case 'A' :
-                scanf(" %d", &Grade);
-                printf("%d\n", BiggerGrades(Grade, Grades));
+                if(scanf(" %d", &Grade) == 1)
+                {
+                    printf("%d\n", BiggerGrades(Grade, Grades));
+                }
                 break;
             case 'B' :
-                scanf(" %d", &Grade);
-                printf("%d\n", SmallerGrades(Grade, Grades));
+                if(scanf(" %d", &Grade) == 1)
+                {
+                    printf("%d\n", SmallerGrades(Grade, Grades));
+                }
                 break;
-            /*case 'F' :
-                scanf(" %d %d", &firstVal, &secondVal);
-                printf("%d\n", Factor(firstVal, secondVal, Grades));
-                break;*/
+            case 'F' :
+                if(scanf(" %d %d", &passGrade, &Percentage) == 2)
+                {
+                    printf("%d\n", Factor(passGrade, Percentage, Grades));
+                }
+                break;
             default:
                 printf("This command is not currently supported by the system.\n");
         }
