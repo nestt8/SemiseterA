@@ -59,11 +59,27 @@ int Min (int grades []) //Function that finds the lowest grade, if there are no 
 
 int Median (int grades[]) //Function that finds the median.
 {
-    int median = -1, i =0;
-    while(i <= GradeNum(grades) / 2)
+
+    int median = -1, i =0, gradeNum = GradeNum(grades);
+    if((gradeNum) == 0)
     {
-        ++median;
-        i += grades[median];
+        return 0;
+    }
+    if(gradeNum % 2 == 0)
+    {
+        while(i < gradeNum / 2)
+        {
+            ++median;
+            i += grades[median];
+        }
+    }
+    else
+    {
+        while(i <= gradeNum / 2)
+        {
+            ++median;
+            i += grades[median];
+        }
     }
     return median;
 }
@@ -119,7 +135,7 @@ int Factor(int passgrade, int percentage, int grades []) //Function that gets a 
 
 int Average(int grades [])
 {
-    int sum = 0, count = 0, avg, temp, i;
+    int sum = 0, count = 0, avg = 0, temp, i;
     for(i = 0; i < GradeRange+1; i++)
     {
         temp = i * grades[i];
@@ -129,7 +145,10 @@ int Average(int grades [])
             count += grades[i];
         }
     }
-    avg = ((double)sum / count) + 0.5;
+    if(count > 0)
+    {
+        avg = (((double)sum / count) + 0.5);
+    }
     return avg;
 }
 int main()
@@ -145,11 +164,26 @@ int main()
         }
         scanf(" %d", &x);
     }
+    /*for(int k = 0; k < 101; k++)
+    {
+        printf("%d:\t%d\n", k, Grades[k]);
+    }
+    int sum1 = 0, sum2 = 0;
+    for(int l = 0; l < 54; l++)
+    {
+        sum1 += Grades[l];
+    }
+    printf("Sum up to 53: %d\n", sum1);
+    for(int z = 0; z < 54; z++)
+    {
+        sum2 += Grades[z];
+    }
+    printf("Sum from 54: %d\n", sum2);*/
     char c;
     int Grade, passGrade, Percentage;
-    while(true) //Infinite loop to receive commands from user and run the corresponding functions.
+    scanf(" %c", &c);
+    while(!feof(stdin)) //Loop until end of file to receive commands from user and run the corresponding functions.
     {
-        scanf(" %c", &c);
         switch(c)
         {
             case 'V' :
@@ -185,6 +219,7 @@ int main()
             default:
                 printf("This command is not currently supported by the system.\n");
         }
+        scanf(" %c", &c);
     }
   return 0;
 }
