@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1480773392 source:c:\users\neta\desktop\hw0\hw2q1\hw2q1.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
