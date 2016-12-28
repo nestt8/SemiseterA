@@ -1,0 +1,26 @@
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\part1_tileset.xnb
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\bin\x86\Debug\TileEngine.exe
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\bin\x86\Debug\TileEngine.pdb
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\obj\x86\Debug\TileEngine.exe
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\obj\x86\Debug\TileEngine.pdb
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\part2_tileset.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\part1_tileset.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\part2_tileset.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\TileEngine.exe
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\TileEngine.pdb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\obj\x86\Debug\TileEngine.csprojResolveAssemblyReference.cache
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\obj\x86\Debug\TileEngine.exe
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\obj\x86\Debug\TileEngine.pdb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\part3_tileset.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\part4_tileset.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Fonts\Pericles6.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\fogofwar.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\hilight.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\mousemap.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\Characters\T_Vlad_Sword_Walking_48x48.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\TileSets\part9_slopemaps.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\button_play.xnb
+C:\Users\neta9_000\Downloads\TileEngine\TileEngine\bin\x86\Debug\Content\Textures\background.xnb

@@ -1,0 +1,2 @@
+C:\Users\Kurt\Documents\Visual Studio 2010\Projects\XNAResources\TileEngine\TileEngine\TileEngineContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\neta9_000\Downloads\TileEngine\TileEngineContent\obj\x86\Debug\TileEngineContent.contentprojResolveAssemblyReference.cache
