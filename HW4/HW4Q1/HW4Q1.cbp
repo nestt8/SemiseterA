@@ -12,13 +12,12 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-Wall" />
-					<Add option="-Werror" />
+					<Add option="-O" />
 					<Add option="-pedantic" />
 					<Add option="-ansi" />
-					<Add option="-W" />
-					<Add option="-O" />
 					<Add option="-g" />
+					<Add option="-Werror" />
+					<Add option="-W" />
 				</Compiler>
 			</Target>
 		</Build>
